@@ -1,9 +1,16 @@
 <?php
-
+//? classe muvie:
 class Movie {
+    
+   private static int $nextId;
+   private int $id;
+
    private string $nameFilm;
    private string $description;
    private int $vote;
+   private string $genre;
+   private Actor $actor;
+
 
    public function __construct(string $_name, string $_description)
    {
@@ -32,6 +39,24 @@ class Movie {
 
 };
 
+class Actor {
+    private string $first_name;
+    private string $last_name;
+
+    public function __construct($_firstName, $_lastName)
+    {
+        $this -> first_name = $_firstName;
+        $this -> last_name = $_lastName;
+    }
+
+    public function getFirstName(): string {
+        return $this -> first_name;
+    }
+    public function getLasttName(): string {
+        return $this -> last_name;
+    }
+}
+
 
 
 try {
@@ -57,3 +82,17 @@ try {
 };
 
 
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP OOP Movies</title>
+</head>
+<body>
+
+    
+</body>
+</html>
