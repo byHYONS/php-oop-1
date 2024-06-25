@@ -11,15 +11,16 @@ class Movie {
     private string $nameFilm;
     private string $description;
     private int $vote;
-    private string $genre;
-    private Actor $actor;
+    private array $genre = [];
+    private array $actor = [];
  
     //* costruttore:
-    public function __construct(string $_name, string $_description)
+    public function __construct(string $_name, string $_description, Actor ...$_actor)
     {
         $this -> id = self::$nextId++;
         $this -> nameFilm = $_name;
         $this -> description = $_description;
+        $this -> actor = $_actor;
     }
  
     //* vot:
@@ -47,6 +48,19 @@ class Movie {
     //* genere:
     public function setGenre(string ...$_genre): void {
         $this -> genre = [...$this -> genre, ...$_genre];
+        // $this->genre = array_merge($this->genre, $_genre);
+    }
+
+    public function getGenre(): string {
+        return $this -> genre;
+    }
+
+    //* actor:
+    public function setActor(Actor $_actor): void {
+        $this -> actor[] = $_actor;
+    }
+    public function getActor(): array {
+        return $this -> actor;
     }
  
  };

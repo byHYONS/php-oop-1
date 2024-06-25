@@ -5,15 +5,16 @@ require_once __DIR__ . '/models/Movie.php';
 
 //? logica di rappresentazione:
 try {
-    $ritorno_la_futuro = new Movie('ritorno al futuro', 'film di fantascienza');
+    $ritorno_la_futuro = new Movie('ritorno al futuro', 'film di fantascienza', new Actor('Micchael J.', 'Fox'), new Actor('Christopher', 'Lioyd'));
     $ritorno_la_futuro -> setVote(5);
-    
+    $ritorno_la_futuro -> setGenre('fantascienza', 'avveneristico');
 
     var_dump($ritorno_la_futuro);
     echo $ritorno_la_futuro -> getName();
     echo $ritorno_la_futuro -> getDescription();
 
-    $top_gun = new Movie('Top Gun', 'film di guerra con Tom Cruise');
+    $top_gun = new Movie('Top Gun', 'film di guerra', new Actor('Ton', 'Cruise'));
+    $top_gun -> setGenre('war', 'avventura');
     $top_gun -> setVote(5);
 
     var_dump($top_gun);
