@@ -51,7 +51,7 @@ class Movie {
         // $this->genre = array_merge($this->genre, $_genre);
     }
 
-    public function getGenre(): string {
+    public function getGenre(): array {
         return $this -> genre;
     }
 

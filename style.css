@@ -13,4 +13,74 @@ body {
     font-family: "Kanit", sans-serif;
 }
 
+/* layout */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.col-6 {
+    width: calc(100% / 2 - (25px * (2 - 1) / 2));
+}
+
+.mt {margin-top: 75px;}
+.mb {margin-top: 75px;}
+
 /* style */
+
+header {
+    background-color: #a19090;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    .container {
+        height: 80px;
+        text-align: center;
+        line-height: 80px;
+        h2 {
+            color: #fff;
+            font-size: 35px;
+        }
+    }
+
+}
+
+main {
+    background-color: #ede4e4;
+    width: 100vw;
+    height: calc(100vh - 180px);
+    overflow: auto;
+    .card {
+        background-color: #fff;
+        border-radius: 15px;
+        padding: 55px;
+        box-shadow: 1px 3px 10px rgba(0, 0, 0, .3);
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #433c3c;
+        }
+        h4 {
+            margin-top: 20px;
+            color: #433c3c;
+        }
+    }
+}
+
+footer {
+    height: 100px;
+    background-color: #302c2c;
+    .container {
+        text-align: center;
+        line-height: 100px;
+        h6 {
+        color: #ede4e4;
+
+        }
+    }
+}
