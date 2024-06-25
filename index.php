@@ -16,22 +16,44 @@ class Movie {
     }
     public function getVote (): int {
         return $this -> vote;
+
+        if (!is_int($this -> vote)) {
+            throw new Exception('Inserisci un numero valido');
+        };
     }
 
     public function getName (): string {
-        $this -> nameFilm;
+        return $this -> nameFilm;
     }
     
     public function getDescription(): string {
-        $this -> description;
+        return $this -> description;
     }
-
-    
-
 
 };
 
-$ritorno_la_futuro = new Movie('ritorno al futuro', 'film di fantascienza');
-$ritorno_la_futuro -> setVote(5);
 
-var_dump($ritorno_la_futuro);
+
+try {
+    $ritorno_la_futuro = new Movie('ritorno al futuro', 'film di fantascienza');
+    $ritorno_la_futuro -> setVote(5);
+
+    var_dump($ritorno_la_futuro);
+    echo $ritorno_la_futuro -> getName();
+    echo $ritorno_la_futuro -> getDescription();
+
+    $top_gun = new Movie('Top Gun', 'film di guerra con Tom Cruise');
+    $top_gun -> setVote(5);
+
+    var_dump($top_gun);
+    echo $top_gun -> getName();
+    echo $top_gun -> getDescription();
+
+    
+} catch (Exception $e) {
+    echo $e -> getMessage();
+} catch (Error $e) {
+    echo $e -> getMessage();
+};
+
+
