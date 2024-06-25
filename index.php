@@ -5,12 +5,33 @@ class Movie {
    private string $description;
    private int $vote;
 
-   function __construct(int $vote)
+   public function __construct(string $_name, string $_description)
    {
-    $this -> vote = $vote;
+    $this -> nameFilm = $_name;
+    $this -> description = $_description;
    }
 
-    public function getNameFilm (string $_name){
-        return $this -> nome = $_name;
+    public function setVote (int $_vote): void {
+        $this -> vote = $_vote;
     }
+    public function getVote (): int {
+        return $this -> vote;
+    }
+
+    public function getName (): string {
+        $this -> nameFilm;
+    }
+    
+    public function getDescription(): string {
+        $this -> description;
+    }
+
+    
+
+
 };
+
+$ritorno_la_futuro = new Movie('ritorno al futuro', 'film di fantascienza');
+$ritorno_la_futuro -> setVote(5);
+
+var_dump($ritorno_la_futuro);
