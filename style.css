@@ -1,0 +1,16 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {list-style-type: none;}
+a {text-decoration: none;}
+
+body {
+    font-size: 18px;
+    font-family: "Kanit", sans-serif;
+}
+
+/* style */

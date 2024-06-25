@@ -1,67 +1,13 @@
 <?php
-//? classe muvie:
-class Movie {
-    
-   private static int $nextId;
-   private int $id;
-
-   private string $nameFilm;
-   private string $description;
-   private int $vote;
-   private string $genre;
-   private Actor $actor;
+//? import file Movie.php:
+require_once __DIR__ . '/models/Movie.php';
 
 
-   public function __construct(string $_name, string $_description)
-   {
-    $this -> nameFilm = $_name;
-    $this -> description = $_description;
-   }
-
-    public function setVote (int $_vote): void {
-        $this -> vote = $_vote;
-    }
-    public function getVote (): int {
-        return $this -> vote;
-
-        if (!is_int($this -> vote)) {
-            throw new Exception('Inserisci un numero valido');
-        };
-    }
-
-    public function getName (): string {
-        return $this -> nameFilm;
-    }
-    
-    public function getDescription(): string {
-        return $this -> description;
-    }
-
-};
-
-class Actor {
-    private string $first_name;
-    private string $last_name;
-
-    public function __construct($_firstName, $_lastName)
-    {
-        $this -> first_name = $_firstName;
-        $this -> last_name = $_lastName;
-    }
-
-    public function getFirstName(): string {
-        return $this -> first_name;
-    }
-    public function getLasttName(): string {
-        return $this -> last_name;
-    }
-}
-
-
-
+//? logica di rappresentazione:
 try {
     $ritorno_la_futuro = new Movie('ritorno al futuro', 'film di fantascienza');
     $ritorno_la_futuro -> setVote(5);
+    
 
     var_dump($ritorno_la_futuro);
     echo $ritorno_la_futuro -> getName();
@@ -89,6 +35,11 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" 
+rel="stylesheet">
     <title>PHP OOP Movies</title>
 </head>
 <body>
