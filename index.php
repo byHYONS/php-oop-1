@@ -70,7 +70,7 @@ try {
                         <?php endforeach ?>
                     <h4>Attori</h4>
                     <?php foreach ($movie -> getActor() as $actor): ?>
-                       <p><?php echo $actor -> getFirstName() . ' ' . $actor -> getLasttName(); ?></p>
+                       <p><?php echo $actor ?-> getFirstName() . ' ' . $actor -> getLasttName() ?? 'Non ci sono'; ?></p>
                     <?php endforeach ?>
                     <p></p>
 
