@@ -11,9 +11,12 @@ class Actor {
         $this -> last_name = $_lastName;
     }
 
+    //* nome:
     public function getFirstName(): string {
         return $this -> first_name;
     }
+
+    //* cognome:
     public function getLasttName(): string {
         return $this -> last_name;
     }
